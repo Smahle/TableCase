@@ -1,0 +1,57 @@
+<form class="form-container" [formGroup]="dataForm" (ngSubmit)="add(dataForm.value)">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Input Form</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+      <!-- Navn -->
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field class="full-width">
+            <mat-label>Navn</mat-label>
+            <input matInput type="text" required formControlName="name" [formControl]="control">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <!-- Alder -->
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field class="full-width">
+            <mat-label>Age</mat-label>
+            <input matInput type="number" min="0" required formControlName='age' [formControl]="control">
+            
+          </mat-form-field>
+        </div>
+      </div>
+
+      
+      <!-- Lutefisk sjekkboks -->
+      <div class="row">
+        <div class="col-md-12">
+          <mat-checkbox formControlName='lutefiskElsker'[formControl]="control">Liker lutefisk</mat-checkbox>
+        </div>
+      </div>
+
+
+      <!-- Fødselsdag -->
+      <div class="row">
+        <div class="col-md-12">
+          <mat-form-field class="full-width">
+            <mat-label>Fødselsdato</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName='birthDay'>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <mat-card-actions>
+        <button type="submit" [disabled]="!dataForm.valid" mat-raised-button color="primary">Submit</button>
+      </mat-card-actions>
+    </mat-card-content>
+
+  </mat-card>
+</form>

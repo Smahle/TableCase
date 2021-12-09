@@ -1,0 +1,18 @@
+Angular – Oppgave
+
+Du skal lage et Angular Material prosjekt som Inneholder følgende:
+
+Sidenav med routing.
+
+    Side som viser frem data i tabell med data fra en «mock» service. Tabell skal kunne filtreres og sorteres. 
+    Data i tabell er valgfri struktur, men må inneholde en av hver datatype (nummer, string, dato, boolean). 
+    Boolean skal vises som «Checkmark» icon for ‘true’, rødt kryss for ‘false’
+    Side som inneholder form til å legge til data i tabellen. Nummer skal valideres som heltall. I formen skal minst 2 felter, ett nummerfelt og ett strengfelt være required.
+    Styling: Sørg for å aligne form elementer, ha spacing mellom ulike elementer (tabell og filter for eksempel). Kort sagt, la det se «pent» ut.
+    Mock service: Statefull service som later som den gjør kall til backend gjennom bruk av RXJS Observable/Subject
+
+https://angular.io/docs
+
+https://material.angular.io/
+
+https://nodejs.org/
